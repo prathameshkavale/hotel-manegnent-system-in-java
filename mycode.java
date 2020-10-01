@@ -1,7 +1,7 @@
-package myproject;
+import java.util.Scanner;
 
 
-import java.util.Scanner; 
+
 
 class hotel
 {
@@ -79,172 +79,8 @@ class add_customer extends hotel
 		System.out.println("\n");
 		
 	}
-
-
-	void booking()
-	{
-		int choice=0;
-		int key1,key2;
-		int table_charge=15;
-		int room_bill=5000;
-		Scanner s2 = new Scanner(System.in);
-		while(choice<=2)
-		{
-		
-			
-		
-		System.out.println("+---------------------------------------+");
-		System.out.println("|        what do you want:              |");
-		System.out.println("|              1.book a table           |");
-		System.out.println("|              2.book a room            |");
-		System.out.println("|              3.exit                   |");
-		System.out.println("+---------------------------------------+");
-		choice=s2.nextInt();
-		
-			switch(choice)
-			{
-				case 1:
-				{
-					System.out.println("the no of table avalables are:"+tables);
-					System.out.println("if you want to book a table press '1' if no press '0' ");
-					key1=s2.nextInt();
-			
-					if(key1==1)
-					{
-						System.out.println("your table is booked");
-						tables--;	
-						System.out.println("the no of table avalables are:"+tables);
-						bill_amount=bill_amount+table_charge;
-					}
-					if(key1==0)
-					{
-						System.out.println("thank you");
-					}
-					break;
-			
-				}
-				case 2:
-				{
-					System.out.println("the no of rooms avalables are:"+rooms);
-					System.out.println("if you want to book a room press '1' if no press '0' ");
-					key2=s2.nextInt();
-					
-					if(key2==1)
-					{
-						System.out.println("your room is booked");
-						rooms--;	
-						System.out.println("the no of rooms avalables are:"+rooms);
-						bill_amount=bill_amount+room_bill;
-					}
-					if(key2==0)
-					{
-						System.out.println("thank you");
-					}
-					break;	
-				}
-				default:
-	        	{
-	        		System.out.println("invalid choice");
-	        	}
-			}
-		}
-	}
-	
-	void order_food()
-	{
-		Scanner s3 = new Scanner(System.in);
-		
-		double veg_thali=200;
-		double non_veg_thali=250;
-		double chappati=20;
-		double roti=15;
-		double rice=60;
-		int food_choice=0;
-		int quantity=0;
-		while(food_choice<=5)
-		{
-		
-			
-			//System.out.println("\n");
-			System.out.println("+---------------------------------------+");
-			System.out.println("|        what do you want:              |");
-			System.out.println("|              1.veg thali              |");
-			System.out.println("|              2.non-veg thali          |");
-			System.out.println("|              3.chappati               |");
-			System.out.println("|              4.roti                   |");
-			System.out.println("|              6.rice                   |");
-			System.out.println("|              6.exit                   |");
-			System.out.println("+---------------------------------------+");
-			food_choice=s3.nextInt();
-			
-			switch(food_choice)
-			{
-				case 1:
-				{
-					System.out.println("how many quantity you want:");
-					quantity= s3.nextInt();
-					System.out.println("your order has been received");
-					bill_amount=bill_amount+(quantity*veg_thali);
-					break;
-				}
-				case 2:
-				{
-					System.out.println("how many quantity you want:");
-					quantity= s3.nextInt();
-					System.out.println("your order has been received");
-					bill_amount=bill_amount+(quantity*non_veg_thali);
-					break;
-				}
-				case 3:
-				{
-					System.out.println("how many quantity you want:");
-					quantity= s3.nextInt();
-					System.out.println("your order has been received");
-					bill_amount=bill_amount+(quantity*chappati);
-					break;
-				}
-				case 4:
-				{
-					System.out.println("how many quantity you want:");
-					quantity= s3.nextInt();
-					System.out.println("your order has been received");
-					bill_amount=bill_amount+(quantity*roti);
-					break;
-				}
-				case 5:
-				{
-					System.out.println("how many quantity you want:");
-					quantity= s3.nextInt();
-					System.out.println("your order has been received");
-					bill_amount=bill_amount+(quantity*rice);
-					break;
-				}
-				default:
-	        	{
-	        		System.out.println("invalid choice");
-	        	}
-			}
-		}
-	}
-	
-	void bill()
-	{
-		System.out.println("\n");
-		System.out.println("+---------------------------------------+");
-		System.out.println("|the hotel name:"+hotel_name+"           |");
-		System.out.println("+---------------------------------------+");
-		System.out.println("*****************************************");
-		System.out.println("the customer name:"+customer_name);
-		System.out.println("the adhaar card no:"+customer_adhaar_no);
-		System.out.println("the mobile no:"+customer_mobile_no);
-		System.out.println("+---------------------------------------+");
-		System.out.println("your total bill is:"+bill_amount);
-		System.out.println("+---------------------------------------+");
-		System.out.println("******************************************");
-		System.out.println("\n");
-	}
-		
 }
+
 
 public class mycode {
 
@@ -252,7 +88,6 @@ public class mycode {
 		// TODO Auto-generated method stub
 		
 		hotel h1=new hotel();
-		
 		add_customer a1=new add_customer();
 		Scanner s4 = new Scanner(System.in);
 		int main_choice=1;
@@ -289,17 +124,17 @@ public class mycode {
 	        	}
 	        	case 3:
 	        	{
-	        		a1.booking();
+	        		//a1.booking();
 	        		break;
 	        	}
 	        	case 4:
 	        	{
-	        		a1.order_food();
+	        		//a1.order_food();
 	        		break;
 	        	}
 	        	case 5:
 	        	{
-	        		a1.bill();
+	        		//a1.bill();
 	        		break;
 	        	}
 	        	default:
@@ -309,6 +144,7 @@ public class mycode {
 	        }
 	        
 		}
+
 	}
 
 }
